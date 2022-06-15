@@ -1,24 +1,13 @@
 "use strict";
-var Profissao;
-(function (Profissao) {
-    Profissao[Profissao["Professora"] = 0] = "Professora";
-    Profissao[Profissao["Atriz"] = 1] = "Atriz";
-    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
-    Profissao[Profissao["Jogadora"] = 3] = "Jogadora";
-})(Profissao || (Profissao = {}));
-const vanessa = {
-    nome: 'Vanessa',
-    idade: 27,
-    profissao: Profissao.Desenvolvedora
-};
-const maria = {
-    nome: 'Maria',
-    idade: 29,
-    materias: ['Matematica', 'Programacao']
-};
-function listar(lista) {
-    for (const item of lista) {
-        console.log('- ', item);
-    }
+let valorAny;
+valorAny = 3;
+valorAny = [1, 5];
+let valorString = 'teste';
+valorString = valorAny;
+let valorString2 = 'testao';
+valorString2 = valorAny;
+function somarString(string1, string2) {
+    console.log(string1 + string2);
 }
-listar(maria.materias);
+somarString(valorString, valorString2);
+somarString('ola', ', como vai?');

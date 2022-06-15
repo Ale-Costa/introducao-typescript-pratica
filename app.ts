@@ -1,40 +1,17 @@
-interface Pessoa{
-    nome: string,
-    idade: number,
-    profissao?: Profissao
+let valorAny: any;
+valorAny = 3;
+
+valorAny = [1,5]
+
+let valorString: string = 'teste';
+valorString = valorAny;
+let valorString2: string = 'testao';
+valorString2 = valorAny;
+
+
+function somarString(string1: string, string2: string){
+    console.log(string1 + string2);
 }
 
-enum Profissao{
-    Professora,
-    Atriz,
-    Desenvolvedora,
-    Jogadora
-}
-
-interface Estudante extends Pessoa{
-    materias: string[]
-}
-
-
-const vanessa: Pessoa = {
-    nome: 'Vanessa',
-    idade: 27,
-    profissao: Profissao.Desenvolvedora
-}
-
-
-
-const maria: Estudante = {
-    nome: 'Maria',
-    idade: 29,
-    materias: ['Matematica', 'Programacao']    
-}
-
-function listar(lista: string[]){
-    for (const item of lista){
-        console.log('- ',item)
-    }
-}
-
-
-listar(maria.materias)
+somarString(valorString, valorString2);
+somarString('ola', ', como vai?')
